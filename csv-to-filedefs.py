@@ -21,7 +21,7 @@ for file in csvlist:
 
     df = pd.read_csv(filename + '.csv')
 
-
+# Add more types.
     def parsetype(dtype, col):
         if dtype == 'int64':
             return 'int" }'
@@ -30,7 +30,7 @@ for file in csvlist:
         if dtype == 'object':
             return parsedates(col)
 
-
+# Update to check more rows?
     def parsedates(cols):
         try:
             parse(cols[1])
